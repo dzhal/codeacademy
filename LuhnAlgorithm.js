@@ -28,5 +28,5 @@ let validateCred = (arr) => {
     return result % 10 === 0;
 };
 
-const valid = [4, 5, 3, 2, 7, 7, 8, 7, 7, 1, 0, 9, 1, 7, 9, 5];
+const valid = [4, 5, 3, 2, 7, 7, 8, 7, 7, 1, 0, 9, 1, 7, 9, 3];
 console.log(validateCred(valid));
