@@ -8,3 +8,6 @@ let reverseArray = (arr) => {
   
   const sentence = ['sense.','make', 'all', 'will', 'This'];
   console.log(reverseArray(sentence)); 
+
+  return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+  return [...new Set(text.toLowerCase().match(/(\w)(?=.*\1)/g))].length;
