@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { getPets } from '../../api/petfinder';
 import Hero from '../../components/hero';
 import Pet from '../../components/pet';
+import { useParams, Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [data, setData] = useState(null);
-  const type = ''; // Fix me!
+  const {type} = useParams();
+
 
   useEffect(() => {
     async function getPetsData() {
@@ -31,9 +33,8 @@ const HomePage = () => {
       {data.length ? (
         <div className="grid">
           {data.map((animal) => (
-            <a // Change me to a Link!
+            <Link to={`/${animal.type.toLowerCase()}/${animal.id}`} // Change me to a Link!
               key={animal.id}
-              href={`/${animal.type.toLowerCase()}/${animal.id}`}
               className="pet"
             >
               <article>
@@ -54,7 +55,7 @@ const HomePage = () => {
                 <p>Color: {animal.colors.primary}</p>
                 <p>Gender: {animal.gender}</p>
               </article>
-            </a> // Don't forget to change me!
+            </Link> // Don't forget to change me!
           ))}
         </div>
       ) : (

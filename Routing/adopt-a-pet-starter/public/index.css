@@ -14,18 +14,19 @@
   justify-content: space-around;
   margin: 0;
 }
+.active {
+  background: rgb(151, 103, 103);
+}
 
 .nav-link {
-  color: white;
+  color: rgb(253, 247, 252);
   text-decoration: none;
   border-radius: 18px;
   padding: 6px 24px;
   font-size: 18px;
 }
 
-.nav-link-active {
-  background: #320059;
-}
+
 
 .pet-type-label {
   text-transform: capitalize;
